@@ -1,0 +1,407 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.5">
+    <world name="default">
+        <!-- Target real time factor is the product of max_step_size and real_time_update_rate -->
+        <!-- Negative real_time_update_rate means that Gazebo will run as fast as possible -->
+        <physics type="ode">
+            <type>world</type>
+            <max_step_size>0.001</max_step_size>
+            <real_time_update_rate>1000</real_time_update_rate>
+            <iters>500</iters>
+        </physics>
+        <!-- A global light source -->
+        <include>
+            <uri>model://sun</uri>
+        </include>
+        <!-- A ground plane -->
+        <include>
+            <uri>model://ground_plane</uri>
+        </include>
+
+
+        <!-- add model -->
+        <model name="box_1">
+            <pose>2.5 2.5 0 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>1 1 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>1 1 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/White</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+        <model name="box_2">
+            <pose>2.5 -2.5 0 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>1 1 0.3</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>1 1 0.3</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/White</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+
+        <model name="box_3">
+            <pose>5 -5 0 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>1 1 0.4</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>1 1 0.4</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/White</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+        <model name="box_4">
+            <pose>5 5 0 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>1 1 0.4</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>1 1 0.4</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/White</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+        <!-- add fake people plane -->
+        <model name="box_5">
+            <pose>5 0 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>0.2 0.2 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>0.2 0.2 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/White</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+        <model name="box_6">
+            <pose>5.1 0 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>0.1 1.5 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>0.1 1.5 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/Green</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+        <model name="box_7">
+            <pose>5.4 0 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>0.6 0.5 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>0.6 0.5 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/Green</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+        <model name="box_8">
+            <pose>6.2 0.2 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>1 0.1 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>1 0.1 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+           
+
+        <model name="box_9">
+            <pose>6.2 -0.2 0 0 0</pose> <!-- position and orientation of the box -->
+            <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>1 0.1 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>1 0.1 0.1</size> <!-- size of the box -->
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                    <uri>file://media/materials/scripts/gazebo.material</uri>
+                    <name>Gazebo/Red</name>
+                    </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+        
+
+        <!-- add stairs -->
+        <model name="nist_stairs_120">
+            <static>true</static>
+            <link name="nist_stairs_120_link">
+            <pose>2.5 0 0.0 0 0 -1.5708</pose>
+            <collision name="collision">
+                <geometry>
+                <mesh>
+                    <uri>model://nist_stairs_120/meshes/nist_stairs_120.dae</uri>
+                    <scale>1 1 1</scale>
+                </mesh>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <geometry>
+                <mesh>
+                    <uri>model://nist_stairs_120/meshes/nist_stairs_120.dae</uri>
+                    <scale>1 1 1</scale>
+                </mesh>
+                </geometry>
+            </visual>
+            </link>
+        </model>
+
+        <!-- add wall -->
+        <model name="grey_wall_front">
+            <static>true</static>
+            <link name="link">
+            <pose>8 0 0 0 0 -1.5708</pose>
+            <collision name="collision">
+                <geometry>
+                <box>
+                    <size>20 0.2 3.5</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <cast_shadows>false</cast_shadows>
+                <geometry>
+                <box>
+                    <size>20 0.2 3.5</size>
+                </box>
+                </geometry>
+                <material>
+                <script>
+                    <uri>model://grey_wall/materials/scripts</uri>
+                    <uri>model://grey_wall/materials/textures</uri>
+                    <name>vrc/grey_wall</name>
+                </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+        
+        <model name="grey_wall_back">
+            <static>true</static>
+            <link name="link">
+            <pose>-8 0 0 0 0 -1.5708</pose>
+            <collision name="collision">
+                <geometry>
+                <box>
+                    <size>20 0.2 3.5</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <cast_shadows>false</cast_shadows>
+                <geometry>
+                <box>
+                    <size>20 0.2 3.5</size>
+                </box>
+                </geometry>
+                <material>
+                <script>
+                    <uri>model://grey_wall/materials/scripts</uri>
+                    <uri>model://grey_wall/materials/textures</uri>
+                    <name>vrc/grey_wall</name>
+                </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+        <model name="grey_wall_left">
+            <static>true</static>
+            <link name="link">
+            <pose>0 10 0 0 0 0</pose>
+            <collision name="collision">
+                <geometry>
+                <box>
+                    <size>16 0.2 3.5</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <cast_shadows>false</cast_shadows>
+                <geometry>
+                <box>
+                    <size>16 0.2 3.5</size>
+                </box>
+                </geometry>
+                <material>
+                <script>
+                    <uri>model://grey_wall/materials/scripts</uri>
+                    <uri>model://grey_wall/materials/textures</uri>
+                    <name>vrc/grey_wall</name>
+                </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+
+        <model name="grey_wall_right">
+            <static>true</static>
+            <link name="link">
+            <pose>0 -10 0 0 0 0</pose>
+            <collision name="collision">
+                <geometry>
+                <box>
+                    <size>16 0.2 3.5</size>
+                </box>
+                </geometry>
+            </collision>
+            <visual name="visual">
+                <cast_shadows>false</cast_shadows>
+                <geometry>
+                <box>
+                    <size>16 0.2 3.5</size>
+                </box>
+                </geometry>
+                <material>
+                <script>
+                    <uri>model://grey_wall/materials/scripts</uri>
+                    <uri>model://grey_wall/materials/textures</uri>
+                    <name>vrc/grey_wall</name>
+                </script>
+                </material>
+            </visual>
+            </link>
+        </model>
+
+
+        
+    </world>
+</sdf>
